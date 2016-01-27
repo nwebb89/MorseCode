@@ -1,4 +1,4 @@
-var charCodes=new Array(45); 
+var charCodes=new Array(46); 
 charCodes["a"]=". _";
 charCodes["b"]="_ . . .";
 charCodes["c"]="_ . _ .";
@@ -44,6 +44,7 @@ charCodes["-"]="-....-";
 charCodes["/"]="-..-.";
 charCodes["@"]=".--.-.";
 charCodes["="]="-...-";
+charCodes[" "]="|";
 
 
 function translateMorse(code){
@@ -55,9 +56,9 @@ var wordSplit = word.split("");
 var morseCode= "";
 
 for(var i =0; i < wordSplit.length; i++){
-	morseCode +=  translateMorse(wordSplit[i]) +" + " ;
+	morseCode +=  translateMorse(wordSplit[i]) +" " ;
 	}
 
-console.log(morseCode);
+document.getElementById('result').innerHTML = morseCode;
 
 
