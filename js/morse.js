@@ -52,7 +52,8 @@ function translateMorse(code){
 }
 
 var word = prompt("Please enter a word");
-var wordSplit = word.split("");
+var wordL = word.toLowerCase();
+var wordSplit = wordL.split("");
 var morseCode= "";
 
 for(var i =0; i < wordSplit.length; i++){
